@@ -8,11 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- I've added this for a splash screen. hope it works -->
-
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-
         <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="publicar_actividad_hint_appearance">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/hint_text_size</item>
+    </style>
+
+    <style name="publicar_actividad_spinner_divider">
+        <item name="android:layout_marginTop">@dimen/default_margin_top</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
 
 </resources>

@@ -88,7 +88,7 @@
     <string name="Nombre_de_la_Actividad">Nombre de la Actividad</string>
     <string name="Descripcion_de_la_Actividad">Descripción de la Actividad</string>
     <string name="Fecha_Inicio">Fecha Inicio</string>
-    <string name="Fecha_Fin">Fecha Fin</string>
+    <string name="fecha_realizarse">Día a realizarse</string>
     <string name="Tiempo_de_Expiracion">Tiempo de Expiración</string>
     <string name="Cantidad_de_Integrantes">Cantidad de Integrantes</string>
     <string name="Recompensa">Recompensa</string>
@@ -104,5 +104,16 @@
     <string name="postulantes">Postulantes</string>
     <string name="buscar">Buscar</string>
     <string name="perfil">Perfil</string>
+    <string name="icono_nombre_actividad">icono_nombre_actividad</string>
+    <string name="icono_descripcion_actividad">icono_descripcion_actividad</string>
+    <string name="icono_fecha_realizarse">icono_fecha_realizarse</string>
+    <string name="icono_cantidad_participantes_requeridos">icono_cantidad_participantes_requeridos</string>
+    <string name="titulo_formulario_publicar_actividad">FORMULARIO DE ACTIVIDAD</string>
+    <string name="imagen_actividad">imagen_actividad</string>
+    <string name="icono_recompensa">icono_recompensa</string>
+    <string name="publicar_actividad_boton_ok">PUBLICAR</string>
+    <string name="publicar_actividad_boton_cancel">CANCELAR</string>
+    <string name="spinner_tipo_seleccion">Tipo de Selección</string>
+    <string name="spinner_tipo_recompensa">Tipo de Recompensa</string>
 
 </resources>

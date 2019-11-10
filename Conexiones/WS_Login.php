@@ -1,20 +1,18 @@
 <?php
 
-$hostname="localhost";
-$database="goodjod";
-$username="root";
-$password="";
+require_once("Config.php");
 
 
 $json=array();
 
 	if(isset($_GET["Ucorreo"]) && isset($_GET["Upass"])){
-		$Ucorreo=$_GET['Ucorreo'];
-		$Upass=$_GET['Upass'];
 		
-		$conexion=mysqli_connect($hostname,$username,$password,$database);
+		$Ucorreo = htmlentities( $_GET['Ucorreo']);
+		$Upass   = htmlentities( $_GET['Upass']);
 		
-		$consulta="SELECT * FROM usuario WHERE Ucorreo= '{$Ucorreo}' AND Upass = '{$Upass}'";
+		$conexion=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		
+		$consulta="SELECT * FROM usuario WHERE Ucorreo = '{$Ucorreo}' AND Upass = '{$Upass}'";
 		$resultado=mysqli_query($conexion,$consulta);
 
 		if($consulta){

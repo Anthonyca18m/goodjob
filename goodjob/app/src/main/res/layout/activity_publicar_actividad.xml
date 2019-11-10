@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGustavo"
     tools:context=".PublicarActividadActivity">
 
     <View
@@ -13,257 +12,284 @@
         android:background="#4d81a2" />
 
     <ScrollView
-        android:layout_width="395dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_left"
+            android:layout_marginEnd="@dimen/default_margin_right"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="363dp"
-                android:layout_height="46dp"
-                android:text="FORMULARIO DE ACTIVIDAD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:gravity="center"
+                android:text="@string/titulo_formulario_publicar_actividad"
                 android:textColor="@color/colorWhite"
-                android:textColorHighlight="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                android:textSize="25dp"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="48dp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardViewCampos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:contentPaddingBottom="15dp"
-                app:contentPaddingLeft="15dp"
-                app:contentPaddingRight="15dp"
-                app:contentPaddingTop="15dp">
+                android:layout_marginTop="@dimen/default_margin_top"
+                app:cardCornerRadius="16dp"
+                app:contentPadding="16dp">
 
                 <LinearLayout
-                    android:layout_width="307dp"
-                    android:layout_height="502dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="312dp"
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
+                        android:layout_marginTop="@dimen/default_margin_top"
+                        app:cardCornerRadius="@dimen/card_view_corner_radius"
+                        app:cardElevation="@dimen/card_view_elevation">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                            android:id="@+id/ivImagenActividad"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/image_default_height"
+                            android:contentDescription="@string/imagen_actividad"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_publicar_actividad" />
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin_top">
+
+                        <ImageView
+                            android:layout_width="@dimen/icono_width"
+                            android:layout_height="@dimen/icono_height"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/icono_nombre_actividad"
                             android:src="@drawable/ic_account_circle_black_24dp" />
 
-                        <EditText
-                            android:id="@+id/txtNombreActividad"
-                            android:layout_width="234dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Nombre_de_la_Actividad"
-                            android:inputType="text"
-                            android:paddingLeft="10dp" />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilNombreActividad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin_right"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="30"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/publicar_actividad_hint_appearance">
 
+                            <EditText
+                                android:id="@+id/txtNombreActividad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Nombre_de_la_Actividad"
+                                android:importantForAutofill="no"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                            android:layout_width="@dimen/icono_width"
+                            android:layout_height="@dimen/icono_height"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/icono_descripcion_actividad"
                             android:src="@drawable/ic_content_paste_black_24dp" />
 
-                        <EditText
-                            android:id="@+id/txtDescrionActividad"
-                            android:layout_width="234dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Descripcion_de_la_Actividad"
-                            android:inputType="text"
-                            android:paddingLeft="10dp" />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilDescripcionActividad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin_right"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="140"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/publicar_actividad_hint_appearance">
 
+                            <EditText
+                                android:id="@+id/txtDescripcionActividad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:hint="@string/Descripcion_de_la_Actividad"
+                                android:importantForAutofill="no"
+                                android:inputType="textMultiLine"
+                                android:lines="5"
+                                android:maxLines="6"
+                                android:minLines="1" />
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                            android:layout_width="@dimen/icono_width"
+                            android:layout_height="@dimen/icono_height"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/icono_fecha_realizarse"
                             android:src="@drawable/ic_date_range_black_24dp" />
 
-                        <EditText
-                            android:id="@+id/txtFechaInicio"
-                            android:layout_width="150dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Fecha_Inicio"
-                            android:inputType="text"
-                            android:paddingLeft="10dp" />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin_right"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/publicar_actividad_hint_appearance">
 
+                            <EditText
+                                android:id="@+id/txtFechaFin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="@string/fecha_realizarse"
+                                android:importantForAutofill="no"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:src="@drawable/ic_date_range_black_24dp" />
-
-                        <EditText
-                            android:id="@+id/txtFechaFin"
-                            android:layout_width="150dp"
-                            android:layout_height="45dp"
+                            android:layout_width="@dimen/icono_width"
+                            android:layout_height="@dimen/icono_height"
                             android:layout_gravity="center_vertical"
-                            android:hint="@string/Fecha_Fin"
-                            android:inputType="text"
-                            android:paddingLeft="10dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
-
-                        <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:src="@drawable/ic_timer_off_black_24dp" />
-
-                        <EditText
-                            android:id="@+id/txtTiempoExpiracion"
-                            android:layout_width="234dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Tiempo_de_Expiracion"
-                            android:inputType="time"
-                            android:paddingLeft="10dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
-
-                        <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
+                            android:contentDescription="@string/icono_cantidad_participantes_requeridos"
                             android:src="@drawable/ic_group_black_24dp" />
 
-                        <EditText
-                            android:id="@+id/txtCantidadIntegrantes"
-                            android:layout_width="234dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Cantidad_de_Integrantes"
-                            android:inputType="number"
-                            android:paddingLeft="10dp" />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilCantidadIntegrantes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin_right"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/publicar_actividad_hint_appearance">
+
+                            <EditText
+                                android:id="@+id/txtCantidadIntegrantes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Cantidad_de_Integrantes"
+                                android:importantForAutofill="no"
+                                android:inputType="number" />
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
+
+                    <View style="@style/publicar_actividad_spinner_divider" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:paddingLeft="25dp">
+                        android:layout_marginTop="@dimen/default_margin_top"
+                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:src="@drawable/ic_local_atm_black_24dp" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/spinner_tipo_seleccion" />
 
-                        <EditText
-                            android:id="@+id/txtRecompensa"
-                            android:layout_width="234dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_vertical"
-                            android:hint="@string/Recompensa"
-                            android:inputType="number"
-                            android:paddingLeft="10dp" />
+                        <Spinner
+                            android:id="@+id/spinnerTipoSeleccion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
                     </LinearLayout>
 
-                </LinearLayout>
+                    <View style="@style/publicar_actividad_spinner_divider" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/spinner_tipo_recompensa" />
+
+                        <Spinner
+                            android:id="@+id/spinnerTipoRecompensa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <View style="@style/publicar_actividad_spinner_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin_top">
+
+                        <ImageView
+                            android:layout_width="@dimen/icono_width"
+                            android:layout_height="@dimen/icono_height"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/icono_recompensa"
+                            android:src="@drawable/ic_local_atm_black_24dp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilRecompensa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin_right"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/publicar_actividad_hint_appearance">
+
+                            <EditText
+                                android:id="@+id/txtRecompensa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Recompensa"
+                                android:importantForAutofill="no"
+                                android:inputType="number" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <LinearLayout
+            <Button
+                android:id="@+id/btnPublicar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:weightSum="2">
+                android:layout_marginStart="@dimen/default_margin_left"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_right"
+                android:background="@drawable/btn_uno"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:elevation="@dimen/button_elevation"
+                android:text="@string/publicar_actividad_boton_ok"
+                android:textColor="@drawable/txt_btn_uno" />
 
-                <LinearLayout
-                    android:layout_width="62dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/btnCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <Button
-                    android:id="@+id/btnPublicar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="2"
-                    android:background="@drawable/btn_uno"
-                    android:text="PUBLICAR"
-                    android:textColor="@drawable/txt_btn_uno" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <Button
-                    android:id="@+id/btnCancelar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="2"
-                    android:background="@drawable/btn_dos"
-                    android:text="CANCELAR"
-                    android:textColor="@drawable/txt_btn_dos" />
-
-            </LinearLayout>
+                android:layout_marginStart="@dimen/default_margin_left"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_right"
+                android:layout_marginBottom="@dimen/default_margin_bottom"
+                android:background="@drawable/btn_dos"
+                android:elevation="@dimen/button_elevation"
+                android:text="@string/publicar_actividad_boton_cancel"
+                android:textColor="@drawable/txt_btn_dos" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

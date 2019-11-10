@@ -13,27 +13,47 @@
         android:background="@color/colorPrimary"/>
 
     <ScrollView
-        android:layout_width="398dp"
-        android:layout_height="678dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="30dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
                     android:elevation="1dp"
-                    android:src="@drawable/perfil" />
+                    android:src="@drawable/check" />
+
+                <Button
+                    android:id="@+id/btnCambiarPerfil"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/ic_plus" />
+
+
+                <TextView
+                    android:id="@+id/tvNombreCompletoPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -42,44 +62,34 @@
                     android:layout_marginBottom="0dp"
                     android:orientation="vertical">
 
+
+
                     <android.support.v7.widget.CardView
-                        android:layout_width="361dp"
-                        android:layout_height="367dp"
-                        android:layout_marginTop="85dp"
-                        app:cardCornerRadius="10dp"
-                        app:contentPaddingBottom="15dp"
-                        app:contentPaddingLeft="15dp"
-                        app:contentPaddingRight="15dp"
-                        app:contentPaddingTop="15dp">
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_gravity="center_horizontal">
 
                         <LinearLayout
-                            android:layout_width="339dp"
-                            android:layout_height="449dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/tvNombreCompletoPerfil"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="60dp"
-                                android:textSize="22sp"
-                                android:textStyle="bold" />
-
-
-                            <LinearLayout
-                                android:layout_width="311dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="20dp"
                                 android:paddingLeft="25dp">
 
                                 <ImageView
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
-                                    android:src="@drawable/ic_account_circle_black_24dp" />
+                                    android:src="@drawable/ic_user_male_circle_filled" />
 
                                 <TextView
-                                    android:layout_width="238dp"
+                                    android:id="@+id/tvDatosPersonales"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:paddingLeft="20dp"
@@ -90,7 +100,7 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="10dp"
                                 android:paddingLeft="25dp">
 
                                 <ImageView
@@ -99,7 +109,7 @@
                                     android:src="@drawable/ic_folder_black_24dp" />
 
                                 <TextView
-                                    android:layout_width="255dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:paddingLeft="20dp"
@@ -109,7 +119,7 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="15dp"
                                 android:paddingLeft="25dp">
 
                                 <ImageView
@@ -118,7 +128,7 @@
                                     android:src="@drawable/ic_work_black_24dp" />
 
                                 <TextView
-                                    android:layout_width="255dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:paddingLeft="20dp"
@@ -129,21 +139,60 @@
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="15dp"
                                 android:paddingLeft="25dp">
 
                                 <ImageView
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
-                                    android:src="@drawable/ic_settings_black_24dp" />
+                                    android:src="@drawable/ic_conohabi" />
 
                                 <TextView
-                                    android:layout_width="255dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:paddingLeft="20dp"
-                                    android:text="Ajustes" />
+                                    android:text="Conocimientos y Habilidades" />
                             </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:paddingLeft="25dp">
+
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/ic_formacion" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text="Formación" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:paddingLeft="25dp">
+
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/ic_idiomas" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text="Idiomas" />
+                            </LinearLayout>
+
+
 
                         </LinearLayout>
 
@@ -210,18 +259,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:orientation="horizontal"
-                        android:weightSum="2">
+                        android:weightSum="2"/>
 
-                        <Button
-                            android:id="@+id/btnContactar"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_weight="2"
-                            android:text="@string/contactar"
-                            android:textColor="@color/colorPrimaryDark" />
-                    </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>

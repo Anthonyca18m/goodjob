@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageAdminActivitiesActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="360dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdmNombreActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:text="NombreActividad"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:textColor="#7d7"
+                        android:text="Publicado Por:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmNombreEmpresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va el nombre de la empresa"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:textColor="#7d7"
+                        android:text="Fotos de la actividad:"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/placeholder" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#7d7"
+                        android:textSize="20dp"
+                        android:text="Descripción:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmDescripcionActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va la descripción de la Actividad"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#7d7"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:text="Publicado en:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmFechaRegistroActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va la Fecha del Registro e  Actividad"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#7d7"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:text="Fecha Inicio - Fin:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmFechaInicioFinActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va la Fecha de inicio y fin de la Actividad"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#7d7"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:text="Personas Requeridas:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmPersonasRequeridasActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va la Cantidad Personas requeridas para la actividad Actividad"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#7d7"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:text="Recompensa:"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAdmRecompensaActividad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:text="Aqui va la recompensa de la Actividad"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/btnAceptarActividadAdmin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Aceptar"
+                            android:background="@color/verde"
+                            android:textColor="#ffffff"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="40dp"
+                            />
+                        <Button
+                            android:id="@+id/btnRechazarActividadAdmin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Rechazar"
+                            android:background="#FF0A0A "
+                            android:textColor="#ffffff"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="100dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
